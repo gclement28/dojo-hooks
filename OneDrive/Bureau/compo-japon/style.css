@@ -1,0 +1,222 @@
+/**
+
+Author : Clément Garcin 
+
+**/
+
+/**fonts**/
+
+:root {
+  --mainFont: 'Staatliches', cursive;
+  --secondaryFont: 'Poppins', sans-serif;
+}
+
+/** SITE BASIC CONFIGURATION **/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--mainFont);
+}
+
+h1 {
+  font-size: 6.9rem;
+}
+h2 {
+  font-size: 4.9rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+.primary {
+  background-color: #aa2c25;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+}
+
+/** HEADER **/
+
+.site-header {
+  border-top: 5px solid #aa2c25;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 5rem;
+}
+
+.site-title {
+  width: 50%;
+  padding-top: 20px;
+}
+
+.header-underline {
+  display: flex;
+  align-items: center;
+}
+
+.header-circle {
+  margin: 5rem;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.header-circle:hover {
+  border: 5px solid #aa2c25;
+  width: 150px;
+  height: 150px;
+  border-color: #aa2c25;
+  background-color: white;
+}
+
+/** Responsive Header**/
+
+@media only screen and (max-width: 768px) {
+  .header-logo {
+    text-align: center;
+  }
+  .header-underline {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .site-title {
+    width: 80%;
+    text-align: center;
+  }
+}
+
+/** MAIN CONTENT **/
+
+.main-img {
+  z-index: 5;
+}
+.main-img img {
+  margin: 10px;
+}
+
+.circle {
+  position: relative;
+  right: 100px;
+  bottom: 400px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  z-index: -5;
+}
+
+.circle:hover {
+  border: 5px solid #aa2c25;
+  width: 250px;
+  height: 250px;
+  border-color: #aa2c25;
+  background-color: white;
+}
+
+/** Responsive main content **/
+
+@media only screen and (max-width: 768px) {
+  .main-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main-img img {
+    width: 80%;
+  }
+
+  .circle {
+    display: none;
+  }
+}
+
+/** TABLE **/
+
+.site-table {
+  border-collapse: collapse;
+  min-width: 400px;
+  width: 50%;
+}
+thead,
+tr {
+  text-align: left;
+  border-bottom: 1px solid black;
+}
+th,
+td {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-family: var(--secondaryFont);
+}
+
+/** TEXT CONTENT **/
+
+.text-section {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.box {
+  margin: 3rem;
+}
+.content-text {
+  font-family: var(--secondaryFont);
+  width: 50%;
+  line-height: 28px;
+  font-size: 16px;
+}
+
+.content-text h3 {
+  line-height: 40px;
+  padding-bottom: 10px;
+}
+
+.signature-list li {
+  display: inline-block;
+  list-style: none;
+}
+.signature-txt {
+  font-size: 14px;
+}
+
+/** Responive Text content **/
+
+@media only screen and (max-width: 768px) {
+  .text-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .content-text {
+    font-family: var(--secondaryFont);
+    width: 80%;
+    line-height: 25px;
+  }
+}
